@@ -9,7 +9,7 @@ TICKET_TYPE = 1
 
 # 出发日期(list) "2018-01-06", "2018-01-07"
 STATION_DATES = [
-    "2020-01-18"
+    "2020-01-21"
 ]
 
 # 填入需要购买的车次(list)，"G1353"
@@ -42,7 +42,7 @@ IS_MORE_TICKET = True
 # 乘车人(list) 多个乘车人ex:
 # "张三",
 # "李四"
-TICKET_PEOPLES = []
+TICKET_PEOPLES = [""]
 
 # 12306登录账号
 USER = ""
@@ -59,7 +59,8 @@ IS_AUTO_CODE = True
 AUTO_CODE_TYPE = 3
 
 # 此处设置云打码服务器地址，如果有自建的服务器，可以自行更改
-HOST = "120.77.154.140:8000"
+# HOST = "120.77.154.140:8000"
+HOST = "localhost:5000"
 REQ_URL = "/verify/base64/"
 HTTP_TYPE = "http"
 # HOST="12306.yinaoxiong.cn" #备用服务器稳定性较差
@@ -116,7 +117,7 @@ IS_PROXY = 0
 OPEN_TIME = "12:59:57"
 # 1=使用selenium获取devicesID
 # 2=使用网页端/otn/HttpZF/logdevice获取devicesId，这个接口的算法目前可能有点问题，如果登录一直302的请改为配置1
-# 3=自己打开浏览器在headers-Cookies中抓取RAIL_DEVICEID和RAIL_EXPIRATION，这个就不用配置selenium
+# 3=自己打开浏览器在查询余票页面的headers-Cookies中抓取RAIL_DEVICEID和RAIL_EXPIRATION，这个就不用配置selenium
 COOKIE_TYPE = 3
 # 如果COOKIE_TYPE=1，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
 # chromedriver配置版本只要和chrome的大版本匹配就行
@@ -126,8 +127,8 @@ CHROME_PATH = "/usr/src/app/chromedriver"
 CHROME_CHROME_PATH = "/opt/google/chrome/google-chrome"
 
 # 如果COOKIE_TYPE=3, 则需配置RAIL_EXPIRATION、RAIL_DEVICEID的值
-RAIL_EXPIRATION = ""
-RAIL_DEVICEID = ""
+RAIL_EXPIRATION = "1577776726143"
+RAIL_DEVICEID = "hXAoAJ8t-fiUJJGtF7712cbzeC7zVvV-rD_7n9aPLz1FkiFOIV0-BWVoxZlPuf4XH-NUL2xMRzcRnsFIZDGV86C8AlK4d9QUZC4AnGw9c2kJ4pZCsWtC8oH2BWR1mRcO9ONkKgsaHGxcUjLShinSzNdAQJnVS2ul"
 # RAIL_EXPIRATION = "1577034103293"
 # RAIL_DEVICEID = "CDno29Erc_Pf3FSXb4dzq-Op64EhWrsi5yUZKVIKR1MAfYo2qFlCeXD8VkexY7_1qg-ClV-fE8j9jgVlPZxRh3wVc2iqLe_5A8sdr62qZx4B22JPF8lFCjpgTKZ5ODW90HJd5tiQsJ1KR9nOqHRxHj1FT5LEIwfw"
 
